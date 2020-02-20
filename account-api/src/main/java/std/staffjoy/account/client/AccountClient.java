@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import std.staffjoy.account.AccountConstant;
 import std.staffjoy.account.dto.CreateAccountRequest;
 import std.staffjoy.account.dto.GenericAccountResponse;
+import std.staffjoy.common.auth.AuthConstant;
 
 @FeignClient(name = AccountConstant.SERVICE_NAME, path = "/v1/account", url = "${account-service-endpoint}")
 public interface AccountClient {
