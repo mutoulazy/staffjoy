@@ -13,7 +13,7 @@ import std.staffjoy.common.validataion.PhoneNumber;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class CreateAccountRequest {
+public class GetOrCreateRequest {
 
   private String name;
   @Email(message = "Invalid emil")

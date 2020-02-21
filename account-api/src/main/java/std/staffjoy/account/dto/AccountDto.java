@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import std.staffjoy.common.validataion.PhoneNumber;
 
 @Data
 @AllArgsConstructor
@@ -25,6 +26,7 @@ public class AccountDto {
   @NotNull
   private Instant memberSince;
   private boolean support;
+  @PhoneNumber
   private String phoneNumber;
   @NotEmpty
   private String photoUrl;
