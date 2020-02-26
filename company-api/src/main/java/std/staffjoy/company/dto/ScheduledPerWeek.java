@@ -1,6 +1,5 @@
-package std.staffjoy.account.dto;
+package std.staffjoy.company.dto;
 
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -10,9 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AccountList {
+public class ScheduledPerWeek {
 
-  private List<AccountDto> accounts;
-  private int limit;
-  private int offset;
+  private String week;
+  private int count;
 }

@@ -1,5 +1,7 @@
-package std.staffjoy.account.dto;
+package std.staffjoy.company.dto;
 
+
+import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -10,9 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AccountList {
+public class AssociationList {
 
-  private List<AccountDto> accounts;
+  @Builder.Default
+  private List<Association> accounts = new ArrayList<>();
   private int limit;
   private int offset;
 }

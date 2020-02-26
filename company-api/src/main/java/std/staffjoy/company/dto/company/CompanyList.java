@@ -1,4 +1,4 @@
-package std.staffjoy.account.dto;
+package std.staffjoy.company.dto.company;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -10,9 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class AccountList {
+public class CompanyList {
 
-  private List<AccountDto> accounts;
+  private List<CompanyDto> companies;
   private int limit;
   private int offset;
 }

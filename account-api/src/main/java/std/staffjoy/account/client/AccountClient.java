@@ -33,69 +33,58 @@ public interface AccountClient {
   @PostMapping(path = "/create")
   GenericAccountResponse createAccount(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid CreateAccountRequest request
-  );
+      @RequestBody @Valid CreateAccountRequest request);
 
   @PostMapping("/get_or_create")
   GenericAccountResponse getOrCreateAccount(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid GetOrCreateRequest request
-  );
+      @RequestBody @Valid GetOrCreateRequest request);
 
   @GetMapping("/list")
   ListAccountResponse listAccounts(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
       @RequestParam int offset,
-      @RequestParam @Min(0) int limit
-  );
+      @RequestParam @Min(0) int limit);
 
   @GetMapping("/get")
   GenericAccountResponse getAccount(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestParam @NotBlank String userId
-  );
+      @RequestParam @NotBlank String userId);
 
   @GetMapping("/get_account_by_phonenumber")
   GenericAccountResponse getAccountByPhonenumber(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestParam @PhoneNumber String phoneNumber
-  );
+      @RequestParam @PhoneNumber String phoneNumber);
 
   @PutMapping("/update")
   GenericAccountResponse updateAccount(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid AccountDto account
-  );
+      @RequestBody @Valid AccountDto account);
 
   @PutMapping("/update_password")
   BaseResponse updatePassword(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid UpdatePasswordRequest request
-  );
+      @RequestBody @Valid UpdatePasswordRequest request);
 
   @PostMapping("/verify_password")
   GenericAccountResponse verifyPassword(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid VerifyPasswordRequest request
-  );
+      @RequestBody @Valid VerifyPasswordRequest request);
 
   @PostMapping("/request_password_reset")
   BaseResponse requestPasswordReset(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid PasswordResetRequest request
-  );
+      @RequestBody @Valid PasswordResetRequest request);
 
   @PostMapping("/request_email_change")
   BaseResponse requestEmailChange(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid EmailChangeRequest request
-  );
+      @RequestBody @Valid EmailChangeRequest request);
 
   @PostMapping("/change_email")
   BaseResponse changeEmail(
       @RequestHeader(AuthConstant.AUTHORIZATION_HEADER) String auth,
-      @RequestBody @Valid EmailConfirmation request
-  );
+      @RequestBody @Valid EmailConfirmation request);
 
   @PostMapping("/track_event")
   BaseResponse trackEvent(@RequestBody @Valid TrackEventRequest request);

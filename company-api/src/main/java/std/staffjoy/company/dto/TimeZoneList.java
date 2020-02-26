@@ -1,18 +1,18 @@
-package std.staffjoy.account.dto;
+package std.staffjoy.company.dto;
 
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.Singular;
 
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 @Builder
-public class AccountList {
+public class TimeZoneList {
 
-  private List<AccountDto> accounts;
-  private int limit;
-  private int offset;
+  @Singular
+  private List<String> timezones;
 }
