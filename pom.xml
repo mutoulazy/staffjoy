@@ -11,6 +11,9 @@
     <module>account-api</module>
     <module>common-lib</module>
     <module>company-api</module>
+    <module>bot-api</module>
+    <module>mail-api</module>
+    <module>account-svc</module>
   </modules>
   <packaging>pom</packaging>
 
