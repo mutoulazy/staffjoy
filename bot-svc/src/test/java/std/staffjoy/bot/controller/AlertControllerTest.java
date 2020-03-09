@@ -48,7 +48,7 @@ import std.staffjoy.mail.dto.EmailRequest;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
 @DirtiesContext // avoid port conflict
-@EnableFeignClients(basePackages = {"xyz.staffjoy.bot.client"})
+@EnableFeignClients(basePackages = {"std.staffjoy.bot.client"})
 @Slf4j
 public class AlertControllerTest {
 
@@ -79,11 +79,11 @@ public class AlertControllerTest {
     accountDto = AccountDto.builder()
         .name("test_user001")
         .phoneNumber("11111111111")
-        .email("test_user001@staffjoy.xyz")
+        .email("test_user001@staffjoy.std")
         .id(userId)
         .memberSince(Instant.now().minus(30, ChronoUnit.DAYS))
         .confirmedAndActive(true)
-        .photoUrl("https://staffjoy.xyz/photo/test01.png")
+        .photoUrl("https://staffjoy.std/photo/test01.png")
         .build();
     when(accountClient.getAccount(AuthConstant.AUTHORIZATION_BOT_SERVICE, userId))
         .thenReturn(new GenericAccountResponse(accountDto));

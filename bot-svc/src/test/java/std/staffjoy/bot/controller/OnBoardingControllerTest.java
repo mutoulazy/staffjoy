@@ -59,11 +59,11 @@ public class OnBoardingControllerTest {
     AccountDto accountDto = AccountDto.builder()
         .name("test_user001")
         .phoneNumber("11111111111")
-        .email("test_user001@staffjoy.xyz")
+        .email("test_user001@staffjoy.std")
         .id(userId)
         .memberSince(Instant.now().minus(30, ChronoUnit.DAYS))
         .confirmedAndActive(true)
-        .photoUrl("https://staffjoy.xyz/photo/test01.png")
+        .photoUrl("https://staffjoy.std/photo/test01.png")
         .build();
     when(accountClient.getAccount(AuthConstant.AUTHORIZATION_BOT_SERVICE, userId))
         .thenReturn(new GenericAccountResponse(accountDto));
