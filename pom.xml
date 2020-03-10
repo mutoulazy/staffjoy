@@ -19,6 +19,7 @@
     <module>bot-svc</module>
     <module>company-svc</module>
     <module>ical-svc</module>
+    <module>mail-svc</module>
   </modules>
   <packaging>pom</packaging>
 
