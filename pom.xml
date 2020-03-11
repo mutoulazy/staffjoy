@@ -21,6 +21,7 @@
     <module>ical-svc</module>
     <module>mail-svc</module>
     <module>sms-svc</module>
+    <module>whoami-svc</module>
   </modules>
   <packaging>pom</packaging>
 
