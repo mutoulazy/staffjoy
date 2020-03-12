@@ -22,6 +22,7 @@
     <module>mail-svc</module>
     <module>sms-svc</module>
     <module>whoami-svc</module>
+    <module>Staffjoy-Proxy</module>
   </modules>
   <packaging>pom</packaging>
 
